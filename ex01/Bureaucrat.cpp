@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:53:12 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/07 12:08:45 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/12/07 14:35:15 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,17 @@ void        Bureaucrat::decrementGrade( void ) {
     if ( this->_grade > 150 )
         throw ( GradeTooLowException() );
     std::cout << "Bureaucrat: " << this->_name << " grade decrement called" << std::endl;
+}
+
+void        Bureaucrat::signForm( Form& form ) {
+    if ( form.getSigned() )
+        std::cout << this->_name << " couldn't sign " << form.getName() << "because form is already signed" << std::endl;
+    else if ( this->_grade <= form.getSignGrade() ) {
+        form.beSigned( *this );
+        std::cout << this->_name << " signed " << form.getName() << std::endl;
+    }
+    else
+        throw ( GradeTooLowException() );
 }
 
 Bureaucrat::~Bureaucrat() {
