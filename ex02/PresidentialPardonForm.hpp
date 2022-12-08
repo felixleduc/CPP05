@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 14:40:30 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/08 16:09:39 by fleduc           ###   ########.fr       */
+/*   Created: 2022/12/08 16:28:02 by fleduc            #+#    #+#             */
+/*   Updated: 2022/12/08 16:28:07 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 # include <iostream>
-# include <cstdlib>
-# include <ctime>
 # include "Form.hpp"
 
-class RobotomyRequestForm : public Form {
+class PresidentialPardonForm : public Form {
   private:
     std::string _target;
   public:
-    RobotomyRequestForm( void );
-    RobotomyRequestForm( std::string target );
-    // RobotomyRequestForm( const RobotomyRequestForm& cp );
-    ~RobotomyRequestForm();
+    PresidentialPardonForm( void );
+    PresidentialPardonForm( std::string target );
+    // PresidentialPardonForm( const PresidentialPardonForm& cp );
+    ~PresidentialPardonForm();
     
     void  execute( const Bureaucrat& executor ) const;
 
-    // RobotomyRequestForm&  operator=( const RobotomyRequestForm& rhs );
+    // PresidentialPardonForm&  operator=( const PresidentialPardonForm& rhs );
 };
 
 

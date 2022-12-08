@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:40:13 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/07 16:08:30 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/12/08 15:53:18 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,4 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 }
 
 // ShrubberyCreationForm&  ShrubberyCreationForm::operator=( const ShrubberyCreationForm& rhs ) {
-    
 // }
