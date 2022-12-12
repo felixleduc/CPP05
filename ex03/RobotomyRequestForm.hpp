@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:28:02 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/12 13:20:40 by fleduc           ###   ########.fr       */
+/*   Created: 2022/12/07 14:40:30 by fleduc            #+#    #+#             */
+/*   Updated: 2022/12/12 13:20:56 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-# define PRESIDENTIALPARDONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include <iostream>
+# include <cstdlib>
+# include <ctime>
 # include "Form.hpp"
 
-class PresidentialPardonForm : public Form {
+class RobotomyRequestForm : public Form {
   private:
     std::string _target;
   public:
-    PresidentialPardonForm( void );
-    PresidentialPardonForm( std::string target );
-    PresidentialPardonForm( const PresidentialPardonForm& cp );
-    ~PresidentialPardonForm();
+    RobotomyRequestForm( void );
+    RobotomyRequestForm( std::string target );
+    RobotomyRequestForm( const RobotomyRequestForm& cp );
+    ~RobotomyRequestForm();
     
     void  execute( const Bureaucrat& executor ) const;
 
-    PresidentialPardonForm&  operator=( const PresidentialPardonForm& rhs );
+    RobotomyRequestForm&  operator=( const RobotomyRequestForm& rhs );
 };
 
 

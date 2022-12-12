@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:40:30 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/07 16:00:11 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/12/12 13:20:32 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ class ShrubberyCreationForm : public Form {
   public:
     ShrubberyCreationForm( void );
     ShrubberyCreationForm( std::string target );
-    // ShrubberyCreationForm( const ShrubberyCreationForm& cp );
+    ShrubberyCreationForm( const ShrubberyCreationForm& cp );
     ~ShrubberyCreationForm();
     
     void  execute( const Bureaucrat& executor ) const;
 
-    // ShrubberyCreationForm&  operator=( const ShrubberyCreationForm& rhs );
+    ShrubberyCreationForm&  operator=( const ShrubberyCreationForm& rhs );
 };
 
 #endif

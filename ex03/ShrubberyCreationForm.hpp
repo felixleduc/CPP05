@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 16:28:02 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/12 13:20:40 by fleduc           ###   ########.fr       */
+/*   Created: 2022/12/07 14:40:30 by fleduc            #+#    #+#             */
+/*   Updated: 2022/12/12 13:20:57 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-# define PRESIDENTIALPARDONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 
 # include <iostream>
+# include <fstream>
 # include "Form.hpp"
 
-class PresidentialPardonForm : public Form {
+class ShrubberyCreationForm : public Form {
   private:
-    std::string _target;
+    std::string  _target;
   public:
-    PresidentialPardonForm( void );
-    PresidentialPardonForm( std::string target );
-    PresidentialPardonForm( const PresidentialPardonForm& cp );
-    ~PresidentialPardonForm();
+    ShrubberyCreationForm( void );
+    ShrubberyCreationForm( std::string target );
+    ShrubberyCreationForm( const ShrubberyCreationForm& cp );
+    ~ShrubberyCreationForm();
     
     void  execute( const Bureaucrat& executor ) const;
 
-    PresidentialPardonForm&  operator=( const PresidentialPardonForm& rhs );
+    ShrubberyCreationForm&  operator=( const ShrubberyCreationForm& rhs );
 };
-
 
 #endif
