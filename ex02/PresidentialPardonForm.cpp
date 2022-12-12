@@ -20,9 +20,9 @@ PresidentialPardonForm::PresidentialPardonForm( std::string target ) : Form( "pr
     std::cout << "PresidentialPardonForm: " << this->getName() << " constructor called" << std::endl;
 }
 
-// PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& cp ) {
-//     *this = cp;
-// }
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& cp ) {
+    *this = cp;
+}
 
 void    PresidentialPardonForm::execute( const Bureaucrat& executor ) const {
     if ( findException( executor, *this ) )
@@ -33,5 +33,8 @@ PresidentialPardonForm::~PresidentialPardonForm() {
     std::cout << "PresidentialPardonForm: " << this->getName() << " destructor called" << std::endl;
 }
 
-// PresidentialPardonForm&  PresidentialPardonForm::operator=( const PresidentialPardonForm& rhs ) {
-// }
+//can't copy because attributes are private in abstract parent class
+PresidentialPardonForm&  PresidentialPardonForm::operator=( const PresidentialPardonForm& rhs ) {
+    ( void )rhs;
+    return ( *this );
+}

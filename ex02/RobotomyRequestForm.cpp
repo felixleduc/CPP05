@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:43:35 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/08 16:29:09 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/12/12 12:38:01 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ RobotomyRequestForm::RobotomyRequestForm( std::string target ) : Form( "robotomy
     std::cout << "RobotomyRequestForm: " << this->getName() << " constructor called" << std::endl;
 }
 
-// RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& cp ) {
-//     *this = cp;
-// }
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& cp ) {
+    *this = cp;
+}
 
 void    RobotomyRequestForm::execute( const Bureaucrat& executor ) const {
     if ( findException( executor, *this ) ) {
@@ -39,5 +39,8 @@ RobotomyRequestForm::~RobotomyRequestForm() {
     std::cout << "RobotomyRequestForm: " << this->getName() << " destructor called" << std::endl;
 }
 
-// RobotomyRequestForm&  RobotomyRequestForm::operator=( const RobotomyRequestForm& rhs ) {
-// }
+//can't copy because attributes are private in abstract parent class
+RobotomyRequestForm&  RobotomyRequestForm::operator=( const RobotomyRequestForm& rhs ) {
+    ( void )rhs;
+    return ( *this );
+}
