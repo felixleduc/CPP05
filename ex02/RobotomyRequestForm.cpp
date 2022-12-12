@@ -6,7 +6,7 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:43:35 by fleduc            #+#    #+#             */
-/*   Updated: 2022/12/12 12:38:01 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/12/12 12:47:38 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ RobotomyRequestForm::~RobotomyRequestForm() {
     std::cout << "RobotomyRequestForm: " << this->getName() << " destructor called" << std::endl;
 }
 
-//can't copy because attributes are private in abstract parent class
 RobotomyRequestForm&  RobotomyRequestForm::operator=( const RobotomyRequestForm& rhs ) {
-    ( void )rhs;
+    this->_target = rhs._target;
     return ( *this );
 }

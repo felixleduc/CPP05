@@ -33,8 +33,7 @@ PresidentialPardonForm::~PresidentialPardonForm() {
     std::cout << "PresidentialPardonForm: " << this->getName() << " destructor called" << std::endl;
 }
 
-//can't copy because attributes are private in abstract parent class
 PresidentialPardonForm&  PresidentialPardonForm::operator=( const PresidentialPardonForm& rhs ) {
-    ( void )rhs;
+    this->_target = rhs._target;
     return ( *this );
 }
